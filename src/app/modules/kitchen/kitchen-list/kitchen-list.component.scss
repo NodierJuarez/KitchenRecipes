@@ -1,0 +1,26 @@
+.form-check-input:checked {
+    background-color: #8DC63F;
+    border-color: #8DC63F; 
+}
+.table {
+    width: 100%;
+    td, th {
+        height: 48px;
+    }
+    &-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;        
+        color: #79797A;
+
+    }
+    &-title-border {
+        border-bottom: 1px #B1C4D1 solid;
+    }
+    &-item-border {
+        border-bottom: 1px #EBF0F3 solid;
+    }
+    
+}

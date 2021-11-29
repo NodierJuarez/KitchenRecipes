@@ -1,0 +1,33 @@
+<h2 class="title">Kitchen Recipes</h2>
+<div class="d-flex">
+    <div class="box-search d-flex align-items-center">
+        <img src="assets/Icon/Search/search.svg" class="icon-search px-3" alt="">
+        <input class="input-search" type="text" placeholder="Search">
+    </div>
+    <div class="ms-0 ms-md-3 box-select position-relative">
+        <span>Cooked before: <strong>{{getSelectedOption | titlecase}} </strong></span>
+        <img #toggleImg (click)="toggleMenu()" class="ps-3 cursor-pointer" src="assets/Icon/arrow-dropdown/16.svg" alt=""> 
+        <div [formGroup]="form" [ngClass]="{'hidden': !isMenuOpen}" #menu class="card position-absolute">
+            <ul  class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="inlineRadio1">All</label>
+                        <input class="form-check-input form-check-input-reverse" type="radio" formControlName="selectedOption" id="inlineRadio1" value="all">
+                    </div>   
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="inlineRadio1">Active</label>
+                        <input class="form-check-input form-check-input-reverse" type="radio" formControlName="selectedOption" id="inlineRadio2" value="active">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="inlineRadio1">Inactive</label>
+                        <input class="form-check-input form-check-input-reverse" type="radio" formControlName="selectedOption" id="inlineRadio3" value="inactive">
+                    </div>
+                </li>
+              </ul>
+        </div>  
+    </div>
+</div>
